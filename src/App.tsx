@@ -1,17 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Chat from './Chat';
+import Home from './Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Chat/>} />
+        <Route path="/chat" element={<Chat/>} />
+      </Routes>
+    </Router>
   );
 }
 
